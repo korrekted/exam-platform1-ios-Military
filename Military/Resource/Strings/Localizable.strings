@@ -1,0 +1,133 @@
+/* 
+  Localizable.strings
+  Military
+
+  Created by Andrey Chernyshev on 24.03.2021.
+  
+*/
+
+// MARK: General
+"Cancel" = "Cancel";
+"Continue" = "Continue";
+
+// MARK: ImagePicker
+"ImagePicker.TakePhoto" = "Take photo";
+"ImagePicker.CameraRoll" = "Camera roll";
+"ImagePicker.PhotoLibrary" = "Photo library";
+
+// MARK: Course
+"Course.Tab.Stats" = "Stats";
+"Course.Tab.Study" = "Study";
+
+// MARK: Splash
+"Splash.Title.Part1" = "Prepared by\n";
+"Splash.Title.Part2" = "RECRUIT\nINSTRUCTORS\n";
+"Splash.Title.Part3" = "for rookies";
+
+// MARK: Onboarding
+"Onboarding.Skip" = "Skip";
+"Onboarding.Proceed" = "Proceed";
+"Onboarding.Yes" = "Yes";
+"Onboarding.No" = "No";
+"Onboarding.Slide1.Text1" = "PERSONAL STUDY\nPLAN TO PASS\nFIRST TIME";
+"Onboarding.Slide1.Text2" = "Practice exams created by certified instructors to help you pass on the first attempt";
+"Onboarding.Slide1.Button" = "Let’s do it";
+"Onboarding.SlideDate.Title" = "WHEN ARE YOU\nTAKING THE EXAM?";
+"Onboarding.SlideCountry.Title" = "WHAT COUNTRY ARE\nYOU FROM?";
+"Onboarding.SlideTime.Title" = "HOW MUCH TIME CAN YOU SPEND ON A TEST?";
+"Onboarding.SlideTime.Min" = "min";
+"Onboarding.SlideTestsCount.Title" = "HOW MANY TESTS WOULD YOU WANT TO TAKE DAILY?";
+"Onboarding.SlideGoals.Title" = "WHAT ARE YOUR\nGOALS?";
+"Onboarding.SlideGoals.Tag1" = "Pass the\nexam";
+"Onboarding.SlideGoals.Tag2" = "Try\nsomething\nnew";
+"Onboarding.SlideGoals.Tag3" = "Become a\nbetter solder";
+"Onboarding.SlideGoals.Tag4" = "Extend my\nknowledge";
+"Onboarding.SlideGoals.Tag5" = "Refresh\nthe basics";
+"Onboarding.SlideQuestion.Title" = "DO YOU AGREE WITH THE STATEMENT?";
+"Onboarding.SlideQuestion1" = "It takes courage to grow up and become who you really are";
+"Onboarding.SlideQuestion2" = "The supreme quality for leadership is unquestionably integrity. Without it, no real success is possible.";
+"Onboarding.SlideQuestion3" = "The conventional army loses if it does not win. The guerrilla wins if he does not lose.";
+"Onboarding.SlideQuestion4" = "Discipline is the soul of an army. It makes small numbers formidable; procures success to the weak, and esteem to all.";
+"Onboarding.SlidePreloader.Title" = "PREPARING YOUR INDIVIDUAL STUDY PLAN";
+"Onboarding.SlidePreloader.Preloader1" = "Analyzing your skill level...";
+"Onboarding.SlidePreloader.Preloader2" = "Analyzing your goals...";
+"Onboarding.SlidePreloader.Preloader3" = "Analyzing your opinions...";
+"Onboarding.SlidePreloader.Preloader4" = "Analyzing your study preferences...";
+"Onboarding.SlidePlan.Title" = "YOUR PERSONAL 98% PASS RATE STUDY PLAN";
+"Onboarding.SlidePlan.Cell1" = "Over 300 tests";
+"Onboarding.SlidePlan.Cell2" = "10000+ individual questions";
+"Onboarding.SlidePlan.Cell3" = "Different exam modes";
+"Onboarding.SlidePlan.Cell4" = "reminders and notifications";
+"Onboarding.SlidePlan.Button" = "Let’s go!";
+
+// MARK: Courses
+"Courses.Title" = "WHERE DO YOU NEED TO IMPROVE THE MOST?";
+"Courses.Button" = "Select";
+
+// MARK: Study
+"Study.Title" = "Study";
+"Study.Day.One" = "day";
+"Study.Day.Two" = "days";
+"Study.Day.Many" = "days";
+"Study.Streak" = "streak";
+"Study.TakeTest" = "Take a test";
+"Study.TakeFreeTest" = "Take a free test";
+"Study.UnlockQuestions" = "Unlock all questions";
+"Study.QuizModes" = "Quiz Modes";
+"Study.Mode.TodaysQuestion" = "Today’s\nQuestion";
+"Study.Mode.TenQuestions" = "10 Questions\nQuick Quiz";
+"Study.Mode.MissedQuestions" = "Missed\nQuestions Quiz";
+"Study.Mode.RandomSet" = "Random\nSet Quiz";
+
+// MARK: Settings
+"Settings.Title" = "Settings";
+"Settings.Unlock" = "Unlock";
+"Settings.Premium" = "PREMIUM";
+"Settings.SelectedExam" = "Selected Exam";
+"Settings.RateUs" = "Rate us";
+"Settings.ContactUs" = "Contact us";
+"Settings.TermsOfUse" = "Terms of use";
+"Settings.PrivacyPolicy" = "Privacy Policy";
+
+// MARK: Stats
+"Stats.PassRate.Title" = " Current pass rate";
+"Stats.MainRate.TestsTake" = "Tests taken";
+"Stats.MainRate.CorrectAnswers" = "Correct answers";
+"Stats.MainRate.QuestionsTaken" = "Questions taken";
+"Stats.MainRate.LongestStreak" = "Longest streak";
+"Stats.MainRate.AnsweredQuestions" = "Answered questions";
+"Stats.Title" = "Stats";
+"Stats.Day.One" = "day";
+"Stats.Day.Two" = "days";
+"Stats.Day.Many" = "days";
+
+// MARK: Paygate
+"Paygate.Main.Title" = "KNOW THE QUESTIONS\nBEFOREHAND";
+"Paygate.Main.Cell1" = "Don’t spend hours learning";
+"Paygate.Main.Cell2" = "Train yourself with 1000+ questions";
+"Paygate.Main.Cell3" = "98% pass rate on the first attempt!";
+"Paygate.Main.Info" = "Secured with iTunes. Cancel anytime.";
+"Paygate.Main.TermsOfUse" = "Terms of use";
+"Paygate.Main.And" = " and ";
+"Paygate.Main.PrivacyPolicy" = "Privacy Policy";
+"Paygate.Main.RestorePurchases" = "Restore purchases";
+"Paygate.Purchase.Failed" = "Failed to make purchase";
+"Paygate.Continue" = "Continue →";
+
+// MARK: Question
+"Question.Explanation" = "Explanation";
+"Question.Continue" = "Continue";
+"Question.Submit" = "Submit test";
+"Question.BackToStudying" = "Back to studying";
+"Question.QuestionProgress" = "Question %u/%u";
+
+// MARK: Test Stats
+"TestStats.Title" = "";
+"TestStats.TestTime" = "Your time";
+"TestStats.CommunityAverage" = "Community average";
+"TestStats.AverageScore" = "Average score";
+"TestStats.Filter.Title" = "Questions";
+"TestStats.Filter.Incorrect" = "Incorrect";
+"TestStats.Filter.Correct" = "Correct";
+"TestStats.Filter.All" = "All";
+"TestStats.QuestionsStats" = "%u correct\n%u incorrect";
