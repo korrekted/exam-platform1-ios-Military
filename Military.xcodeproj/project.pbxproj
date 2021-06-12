@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96737E672674B00B00230FB6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96737E662674B00B00230FB6 /* GoogleService-Info.plist */; };
 		967AD7492618C0C1008E8175 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AD63B2618C0C0008E8175 /* UIColorExtension.swift */; };
 		967AD74A2618C0C1008E8175 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AD63C2618C0C0008E8175 /* Collection+Extension.swift */; };
 		967AD74B2618C0C1008E8175 /* UITapGestureRecognizerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AD63D2618C0C0008E8175 /* UITapGestureRecognizerExtension.swift */; };
@@ -213,6 +214,7 @@
 
 /* Begin PBXFileReference section */
 		8D43EAFD32495BC8EAACE85D /* Pods-Military.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Military.debug.xcconfig"; path = "Target Support Files/Pods-Military/Pods-Military.debug.xcconfig"; sourceTree = "<group>"; };
+		96737E662674B00B00230FB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		967AD63B2618C0C0008E8175 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		967AD63C2618C0C0008E8175 /* Collection+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		967AD63D2618C0C0008E8175 /* UITapGestureRecognizerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITapGestureRecognizerExtension.swift; sourceTree = "<group>"; };
@@ -1263,6 +1265,7 @@
 				96E9A210260B3E0D00412196 /* Assets.xcassets */,
 				96E9A248260B3FD800412196 /* LaunchScreen.storyboard */,
 				96E9A215260B3E0D00412196 /* Info.plist */,
+				96737E662674B00B00230FB6 /* GoogleService-Info.plist */,
 				96E9A431260B40ED00412196 /* Military-Bridging-Header.h */,
 			);
 			path = Resource;
@@ -1314,6 +1317,7 @@
 				96E9A201260B3E0C00412196 /* Frameworks */,
 				96E9A202260B3E0C00412196 /* Resources */,
 				E639887BCF611CC7B12A89CE /* [CP] Embed Pods Frameworks */,
+				96737E682674B02A00230FB6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1362,6 +1366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				967AD8162618F32C008E8175 /* Onboarding.Chart.json in Resources */,
+				96737E672674B00B00230FB6 /* GoogleService-Info.plist in Resources */,
 				96E9A211260B3E0D00412196 /* Assets.xcassets in Resources */,
 				96E9A24F260B3FF900412196 /* Localizable.strings in Resources */,
 				96E9A246260B3FCE00412196 /* SF-Pro-Rounded-Bold.otf in Resources */,
@@ -1374,6 +1379,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		96737E682674B02A00230FB6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 		D8B0A12ECFA0B396E94EBFA7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1744,7 +1768,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 2W4U9UWRKZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Military/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1752,7 +1777,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = exam.asvab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Military Development";
@@ -1770,7 +1795,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2W4U9UWRKZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Military/Resource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -1778,7 +1803,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = exam.asvab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Military AppStore";
