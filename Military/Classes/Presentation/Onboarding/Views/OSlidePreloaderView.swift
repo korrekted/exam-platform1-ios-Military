@@ -28,6 +28,10 @@ final class OSlidePreloaderView: OSlideView {
     override func moveToThis() {
         progressView.progressAnimation(duration: 4.5)
         calculatePercent()
+        
+        SDKStorage.shared
+            .amplitudeManager
+            .logEvent(name: "Plan Preparing Screen", parameters: [:])
     }
 }
 
@@ -46,14 +50,10 @@ private extension OSlidePreloaderView {
             }
             self?.percentLabel.text = "\(percent) %"
             
-            if percent <= 25 {
+            if percent <= 50 {
                 self?.analyzeLabel.text = "Onboarding.SlidePreloader.Preloader1".localized
-            } else if percent <= 50 {
-                self?.analyzeLabel.text = "Onboarding.SlidePreloader.Preloader2".localized
-            } else if percent <= 75 {
-                self?.analyzeLabel.text = "Onboarding.SlidePreloader.Preloader3".localized
             } else {
-                self?.analyzeLabel.text = "Onboarding.SlidePreloader.Preloader4".localized
+                self?.analyzeLabel.text = "Onboarding.SlidePreloader.Preloader2".localized
             }
             
             if seconds >= duration {
@@ -108,8 +108,8 @@ private extension OSlidePreloaderView {
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
             .textColor(UIColor.black)
-            .font(Fonts.SFProRounded.bold(size: 27.scale))
-            .lineHeight(32.scale)
+            .font(Fonts.SFProRounded.bold(size: 25.scale))
+            .lineHeight(29.scale)
             .textAlignment(.center)
         
         let view = UILabel()
@@ -142,7 +142,7 @@ private extension OSlidePreloaderView {
         let view = UILabel()
         view.textAlignment = .center
         view.font = Fonts.SFProRounded.bold(size: 45.scale)
-        view.textColor = UIColor(integralRed: 31, green: 31, blue: 31)
+        view.textColor = UIColor.black
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

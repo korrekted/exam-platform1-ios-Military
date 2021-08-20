@@ -30,6 +30,8 @@ extension SCTakeTestCell {
             .font(Fonts.SFProRounded.bold(size: 19.scale))
         let text = activeSubscription ? "Study.TakeTest".localized : "Study.TakeFreeTest".localized
         button.setAttributedTitle(text.attributed(with: attrs), for: .normal)
+        
+        button.backgroundColor = Appearance.mainColor
     }
 }
 
@@ -61,7 +63,6 @@ private extension SCTakeTestCell {
 private extension SCTakeTestCell {
     func makeButton() -> UIButton {
         let view = UIButton()
-        view.backgroundColor = UIColor(integralRed: 141, green: 169, blue: 132)
         view.isUserInteractionEnabled = false
         view.layer.cornerRadius = 16.scale
         view.translatesAutoresizingMaskIntoConstraints = false

@@ -25,7 +25,7 @@ final class StatsView: UIView {
 // MARK: Private
 private extension StatsView {
     func initialize() {
-        backgroundColor = UIColor.white
+        backgroundColor = Appearance.backgroundColor
     }
 }
 
@@ -65,7 +65,7 @@ private extension StatsView {
     
     func makeTableView() -> StatsTableView {
         let view = StatsTableView()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = Appearance.backgroundColor
         view.showsVerticalScrollIndicator = false
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

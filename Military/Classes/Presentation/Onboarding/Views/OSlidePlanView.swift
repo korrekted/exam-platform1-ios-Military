@@ -29,6 +29,10 @@ final class OSlidePlanView: OSlideView {
     
     override func moveToThis() {
         chartView.play()
+        
+        SDKStorage.shared
+            .amplitudeManager
+            .logEvent(name: "Personal Plan Screen", parameters: [:])
     }
 }
 
@@ -86,8 +90,8 @@ private extension OSlidePlanView {
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
             .textColor(UIColor.black)
-            .font(Fonts.SFProRounded.bold(size: 27.scale))
-            .lineHeight(32.scale)
+            .font(Fonts.SFProRounded.bold(size: 25.scale))
+            .lineHeight(29.scale)
             .textAlignment(.center)
         
         let view = UILabel()
@@ -108,10 +112,12 @@ private extension OSlidePlanView {
         return view
     }
     
-    func makeCell(title: String, image: String) -> OSlide15Cell {
-        let view = OSlide15Cell()
+    func makeCell(title: String, image: String) -> OSlidePlanCell {
+        let view = OSlidePlanCell()
         view.label.text = title.localized
         view.imageView.image = UIImage(named: image)
+        view.imageView.image = view.imageView.image?.withRenderingMode(.alwaysTemplate)
+        view.imageView.tintColor = Appearance.mainColor
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
@@ -125,7 +131,7 @@ private extension OSlidePlanView {
             .textAlignment(.center)
         
         let view = UIButton()
-        view.backgroundColor = UIColor(integralRed: 141, green: 169, blue: 132)
+        view.backgroundColor = Appearance.mainColor
         view.layer.cornerRadius = 16.scale
         view.setAttributedTitle("Onboarding.SlidePlan.Button".localized.attributed(with: attrs), for: .normal)
         view.addTarget(self, action: #selector(onNext), for: .touchUpInside)

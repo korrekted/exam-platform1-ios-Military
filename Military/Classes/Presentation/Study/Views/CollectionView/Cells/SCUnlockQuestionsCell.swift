@@ -50,7 +50,7 @@ private extension SCUnlockQuestionsCell {
 private extension SCUnlockQuestionsCell {
     func makeButton() -> UIButton {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
             .font(Fonts.SFProRounded.bold(size: 19.scale))
         
         let view = UIButton()

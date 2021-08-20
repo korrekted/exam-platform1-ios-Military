@@ -70,7 +70,7 @@ private extension MainStatsDescriptionView {
     
     func makeSeparatorView() -> UIView {
         let view = UIView()
-        view.backgroundColor = UIColor(integralRed: 141, green: 169, blue: 132).withAlphaComponent(0.1)
+        view.backgroundColor = Appearance.mainColor.withAlphaComponent(0.1)
         view.translatesAutoresizingMaskIntoConstraints = false
         view.heightAnchor.constraint(equalToConstant: 1.scale).isActive = true
         return view

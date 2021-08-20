@@ -26,7 +26,7 @@ class MainStatsDescriptionLineView: UIView {
 extension MainStatsDescriptionLineView {
     func setup(title: String, value: String) {
         let titleAttributes = TextAttributes()
-            .font(Fonts.SFProRounded.semiBold(size: 17.scale))
+            .font(Fonts.SFProRounded.regular(size: 17.scale))
             .lineHeight(20.scale)
             .textAlignment(.left)
             .textColor(UIColor(integralRed: 31, green: 31, blue: 31))

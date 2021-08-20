@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>285858096780-n3qoglphh33l9tv5abgip4usstqg9l0m.apps.googleusercontent.com</string>
+	<string>285858096780-402p303va3p1efkltt23sernl1q24q9s.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.285858096780-n3qoglphh33l9tv5abgip4usstqg9l0m</string>
+	<string>com.googleusercontent.apps.285858096780-402p303va3p1efkltt23sernl1q24q9s</string>
 	<key>API_KEY</key>
 	<string>AIzaSyD8SmUXAyGr-jqoVsKJN68j2wdxGC6Z-Iw</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>exam.military</string>
+	<string>exam.asvab</string>
 	<key>PROJECT_ID</key>
 	<string>asvab-exam</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:285858096780:ios:08c6719027bacf9a8b7da9</string>
+	<string>1:285858096780:ios:d70723727aa3e15b8b7da9</string>
 </dict>
 </plist>

@@ -27,7 +27,7 @@ final class CoursesView: UIView {
 // MARK: Private
 private extension CoursesView {
     func initialize() {
-        backgroundColor = UIColor.white
+        backgroundColor = Appearance.backgroundColor
     }
 }
 
@@ -60,9 +60,9 @@ private extension CoursesView {
 private extension CoursesView {
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
-            .font(Fonts.SFProRounded.bold(size: 28.scale))
-            .lineHeight(33.scale)
+            .textColor(UIColor.black)
+            .font(Fonts.SFProRounded.bold(size: 34.scale))
+            .lineHeight(40.scale)
             .textAlignment(.center)
         
         let view = UILabel()
@@ -94,8 +94,8 @@ private extension CoursesView {
             .textAlignment(.center)
         
         let view = UIButton()
-        view.backgroundColor = UIColor(integralRed: 141, green: 169, blue: 132)
-        view.layer.cornerRadius = 30.scale
+        view.backgroundColor = Appearance.mainColor
+        view.layer.cornerRadius = 16.scale
         view.setAttributedTitle("Courses.Button".localized.attributed(with: attrs), for: .normal)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
