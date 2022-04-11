@@ -18,6 +18,8 @@ final class TestViewModel {
     let didTapSubmit = PublishRelay<Void>()
     let answers = BehaviorRelay<AnswerElement?>(value: nil)
     
+    lazy var activityIndicator = RxActivityIndicator()
+    
     lazy var courseName = makeCourseName()
     lazy var question = makeQuestion()
     lazy var isEndOfTest = endOfTest()
@@ -60,9 +62,10 @@ private extension TestViewModel {
         let questions = testElement
             .compactMap { $0.element?.questions }
         
+        let mode = testMode.asObservable()
+        
         let dataSource = Observable
-            .combineLatest(questions, selectedAnswers)
-            .withLatestFrom(testMode) { ($0.0, $0.1, $1) }
+            .combineLatest(questions, selectedAnswers, mode) { ($0, $1, $2) }
             .scan([], accumulator: questionAccumulator)
         
         return dataSource
@@ -108,6 +111,7 @@ private extension TestViewModel {
                 return test
                     .compactMap { $0 }
                     .asObservable()
+                    .trackActivity(self.activityIndicator)
                     .materialize()
                     .filter {
                         guard case .completed = $0 else { return true }

@@ -26,15 +26,15 @@ class MainStatsDescriptionLineView: UIView {
 extension MainStatsDescriptionLineView {
     func setup(title: String, value: String) {
         let titleAttributes = TextAttributes()
-            .font(Fonts.SFProRounded.regular(size: 17.scale))
+            .font(Fonts.SFProRounded.bold(size: 17.scale))
             .lineHeight(20.scale)
             .textAlignment(.left)
-            .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
+            .textColor(UIColor.black)
         
         let valueAttributes = TextAttributes()
             .font(Fonts.SFProRounded.bold(size: 17.scale))
             .lineHeight(20.scale)
-            .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
+            .textColor(Appearance.mainColor)
             .textAlignment(.right)
         
         titleLabel.attributedText = title.attributed(with: titleAttributes)

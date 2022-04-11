@@ -52,8 +52,8 @@ private extension SCBriefDayView {
         ])
         
         NSLayoutConstraint.activate([
-            dayLabel.widthAnchor.constraint(equalToConstant: 36.scale),
-            dayLabel.heightAnchor.constraint(equalToConstant: 36.scale),
+            dayLabel.widthAnchor.constraint(equalToConstant: 35.scale),
+            dayLabel.heightAnchor.constraint(equalToConstant: 35.scale),
             dayLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
             dayLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
@@ -79,10 +79,10 @@ private extension SCBriefDayView {
         view.topInset = 0
         view.bottomInset = 0
         view.textAlignment = .center
-        view.layer.cornerRadius = 10.scale
+        view.layer.cornerRadius = 17.5.scale
         view.layer.masksToBounds = true
         view.textColor = UIColor.white
-        view.backgroundColor = UIColor(integralRed: 141, green: 169, blue: 132)
+        view.backgroundColor = Appearance.mainColor
         view.font = Fonts.SFProRounded.semiBold(size: 17.scale)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

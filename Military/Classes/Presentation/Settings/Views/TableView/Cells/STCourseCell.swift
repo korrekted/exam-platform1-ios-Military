@@ -1,17 +1,18 @@
 //
-//  STReferencesCell.swift
-//  FNP
+//  STCourseCell.swift
+//  Nursing
 //
-//  Created by Andrey Chernyshev on 19.07.2021.
+//  Created by Andrey Chernyshev on 26.01.2021.
 //
 
 import UIKit
 
-final class STReferencesCell: UITableViewCell {
+final class STCourseCell: UITableViewCell {
     var tapped: (() -> Void)?
     
     lazy var container = makeContainer()
     lazy var titleLabel = makeTitleLabel()
+    lazy var nameLabel = makeNameLabel()
     lazy var arrowIcon = makeArrowIcon()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -26,8 +27,20 @@ final class STReferencesCell: UITableViewCell {
     }
 }
 
+// MARK: API
+extension STCourseCell {
+    func setup(course: Course) {
+        let attrs = TextAttributes()
+            .textColor(UIColor.black)
+            .font(Fonts.SFProRounded.semiBold(size: 17.scale))
+            .lineHeight(20.scale)
+            .letterSpacing(-0.24.scale)
+        nameLabel.attributedText = course.name.attributed(with: attrs)
+    }
+}
+
 // MARK: Private
-private extension STReferencesCell {
+private extension STCourseCell {
     func initialize() {
         backgroundColor = UIColor.clear
         contentView.backgroundColor = UIColor.clear
@@ -44,7 +57,7 @@ private extension STReferencesCell {
 }
 
 // MARK: Make constraints
-private extension STReferencesCell {
+private extension STCourseCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
             container.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.scale),
@@ -55,7 +68,14 @@ private extension STReferencesCell {
         
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 15.scale),
-            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+            titleLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -15.scale),
+            titleLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 15.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            nameLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 15.scale),
+            nameLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -15.scale),
+            nameLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -15.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -68,10 +88,10 @@ private extension STReferencesCell {
 }
 
 // MARK: Lazy initialization
-private extension STReferencesCell {
+private extension STCourseCell {
     func makeContainer() -> UIView {
         let view = UIView()
-        view.backgroundColor = UIColor(integralRed: 247, green: 248, blue: 246)
+        view.backgroundColor = UIColor.white
         view.layer.cornerRadius = 15.scale
         view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -81,13 +101,20 @@ private extension STReferencesCell {
     
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
-            .font(Fonts.SFProRounded.semiBold(size: 17.scale))
+            .textColor(Appearance.mainColor)
+            .font(Fonts.SFProRounded.regular(size: 13.scale))
             .lineHeight(20.scale)
             .letterSpacing(-0.24.scale)
         
         let view = UILabel()
-        view.attributedText = "Settings.References".localized.attributed(with: attrs)
+        view.attributedText = "Settings.SelectedExam".localized.attributed(with: attrs)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        container.addSubview(view)
+        return view
+    }
+    
+    func makeNameLabel() -> UILabel {
+        let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(view)
         return view

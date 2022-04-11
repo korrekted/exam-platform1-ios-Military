@@ -1,19 +1,21 @@
 //
-//  STCourseCell.swift
-//  Nursing
+//  STModeCell.swift
+//  FNP
 //
-//  Created by Andrey Chernyshev on 26.01.2021.
+//  Created by Andrey Chernyshev on 12.07.2021.
 //
 
 import UIKit
 
-final class STCourseCell: UITableViewCell {
-    var tapped: (() -> Void)?
+final class STModeCell: UITableViewCell {
+    var tapped: ((TestMode) -> Void)?
     
     lazy var container = makeContainer()
     lazy var titleLabel = makeTitleLabel()
     lazy var nameLabel = makeNameLabel()
     lazy var arrowIcon = makeArrowIcon()
+    
+    private var testMode: TestMode?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -28,19 +30,30 @@ final class STCourseCell: UITableViewCell {
 }
 
 // MARK: API
-extension STCourseCell {
-    func setup(course: Course) {
+extension STModeCell {
+    func setup(mode: TestMode) {
+        self.testMode = mode
+        
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor(integralRed: 224, green: 117, blue: 140))
             .font(Fonts.SFProRounded.semiBold(size: 17.scale))
             .lineHeight(20.scale)
             .letterSpacing(-0.24.scale)
-        nameLabel.attributedText = course.name.attributed(with: attrs)
+            .textAlignment(.right)
+        
+        switch mode {
+        case .fullComplect:
+            nameLabel.attributedText = "Onboarding.Modes.Cell1.Title".localized.attributed(with: attrs)
+        case .noExplanations:
+            nameLabel.attributedText = "Onboarding.Modes.Cell2.Title".localized.attributed(with: attrs)
+        case .onAnExam:
+            nameLabel.attributedText = "Onboarding.Modes.Cell3.Title".localized.attributed(with: attrs)
+        }
     }
 }
 
 // MARK: Private
-private extension STCourseCell {
+private extension STModeCell {
     func initialize() {
         backgroundColor = UIColor.clear
         contentView.backgroundColor = UIColor.clear
@@ -52,12 +65,16 @@ private extension STCourseCell {
     
     @objc
     func didTap() {
-        tapped?()
+        guard let mode = testMode else {
+            return
+        }
+        
+        tapped?(mode)
     }
 }
 
 // MARK: Make constraints
-private extension STCourseCell {
+private extension STModeCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
             container.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.scale),
@@ -68,14 +85,13 @@ private extension STCourseCell {
         
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 15.scale),
-            titleLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -15.scale),
-            titleLabel.topAnchor.constraint(equalTo: container.topAnchor, constant: 15.scale)
+            titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            nameLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 15.scale),
-            nameLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -15.scale),
-            nameLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -15.scale)
+            nameLabel.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 80.scale),
+            nameLabel.trailingAnchor.constraint(equalTo: container.trailingAnchor, constant: -40.scale),
+            nameLabel.centerYAnchor.constraint(equalTo: container.centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -88,10 +104,10 @@ private extension STCourseCell {
 }
 
 // MARK: Lazy initialization
-private extension STCourseCell {
+private extension STModeCell {
     func makeContainer() -> UIView {
         let view = UIView()
-        view.backgroundColor = UIColor(integralRed: 247, green: 248, blue: 246)
+        view.backgroundColor = UIColor.white
         view.layer.cornerRadius = 15.scale
         view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -101,13 +117,13 @@ private extension STCourseCell {
     
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(Appearance.mainColor)
-            .font(Fonts.SFProRounded.regular(size: 13.scale))
+            .textColor(UIColor.black)
+            .font(Fonts.SFProRounded.semiBold(size: 17.scale))
             .lineHeight(20.scale)
             .letterSpacing(-0.24.scale)
         
         let view = UILabel()
-        view.attributedText = "Settings.SelectedExam".localized.attributed(with: attrs)
+        view.attributedText = "Settings.ExamMode".localized.attributed(with: attrs)
         view.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(view)
         return view

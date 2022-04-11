@@ -98,7 +98,7 @@ private extension BottomView {
 private extension BottomView {
     func makeBottomButton() -> UIButton {
         let view = UIButton()
-        view.layer.cornerRadius = 16.scale
+        view.layer.cornerRadius = 30.scale
         view.backgroundColor = Appearance.mainColor
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
@@ -108,7 +108,7 @@ private extension BottomView {
     func makeNextButton() -> UIButton {
         let view = UIButton()
         view.setAttributedTitle("Question.NextQuestion".localized.attributed(with: Self.buttonAttr), for: .normal)
-        view.layer.cornerRadius = 16.scale
+        view.layer.cornerRadius = 30.scale
         view.backgroundColor = Appearance.mainColor
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

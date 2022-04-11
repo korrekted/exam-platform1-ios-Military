@@ -80,7 +80,7 @@ private extension SCModeCell {
     func makeContainer() -> UIView {
         let view = UIView()
         view.layer.cornerRadius = 20.scale
-        view.backgroundColor = UIColor(integralRed: 247, green: 248, blue: 246)
+        view.backgroundColor = UIColor.white
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

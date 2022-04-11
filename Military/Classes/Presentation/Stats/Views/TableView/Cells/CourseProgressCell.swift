@@ -101,7 +101,7 @@ private extension CourseProgressCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 20.scale
-        view.backgroundColor = UIColor(integralRed: 247, green: 248, blue: 246)
+        view.backgroundColor = .white
         contentView.addSubview(view)
         return view
     }

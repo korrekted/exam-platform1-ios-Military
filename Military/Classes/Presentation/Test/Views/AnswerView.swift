@@ -90,8 +90,8 @@ private extension AnswerView {
     func setState(state: State) {
         switch state {
         case .initial:
-            layer.borderWidth = 1.scale
-            layer.borderColor = UIColor(integralRed: 218, green: 218, blue: 218).cgColor
+            layer.borderWidth = 0
+            layer.borderColor = UIColor.clear.cgColor
             backgroundColor = .white
             iconView.image = nil
         case .selected:

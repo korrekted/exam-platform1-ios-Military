@@ -50,13 +50,13 @@ private extension SCUnlockQuestionsCell {
 private extension SCUnlockQuestionsCell {
     func makeButton() -> UIButton {
         let attrs = TextAttributes()
-            .textColor(UIColor(integralRed: 31, green: 31, blue: 31))
+            .textColor(UIColor.white)
             .font(Fonts.SFProRounded.bold(size: 19.scale))
         
         let view = UIButton()
         view.isUserInteractionEnabled = false
-        view.layer.cornerRadius = 16.scale
-        view.backgroundColor = UIColor(integralRed: 247, green: 214, blue: 137)
+        view.layer.cornerRadius = 30.scale
+        view.backgroundColor = Appearance.mainColor
         view.setAttributedTitle("Study.UnlockQuestions".localized.attributed(with: attrs), for: .normal)
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)

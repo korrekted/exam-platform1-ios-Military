@@ -42,7 +42,7 @@ private extension SplashView {
         NSLayoutConstraint.activate([
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -66.scale),
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
             imageView.heightAnchor.constraint(equalToConstant: 366.scale)
         ])
     }
@@ -52,13 +52,13 @@ private extension SplashView {
 private extension SplashView {
     func makeTitleLabel() -> UILabel {
         let attrs1 = TextAttributes()
-            .textColor(Appearance.progress1Color)
+            .textColor(Appearance.progress2Color)
             .font(Fonts.SFProRounded.bold(size: 40.scale))
             .lineHeight(48.scale)
             .textAlignment(.center)
         
         let attrs2 = TextAttributes()
-            .textColor(Appearance.progress2Color)
+            .textColor(Appearance.mainColor)
             .font(Fonts.SFProRounded.bold(size: 45.scale))
             .lineHeight(53.scale)
             .textAlignment(.center)
