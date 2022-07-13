@@ -17,6 +17,7 @@ final class GlobalDefinitions {
     static let amplitudeApiKey = "b503251969f4b1d7901d2f7d1388d476"
     static let appsFlyerApiKey = "DCciCfYXjMQ8QnkdCg8qzk"
 
+    static let appStoreUrl = "https://apps.apple.com/app/asvab-practice-test-2022/id1561487785"
     static let appleAppID = "1561487785"
 
     static let termsOfServiceUrl = "https://quantresear.ch/terms.html"

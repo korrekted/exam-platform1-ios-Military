@@ -107,7 +107,7 @@ private extension OSlideGoalsView {
 private extension OSlideGoalsView {
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(Appearance.blackColor)
             .font(Fonts.SFProRounded.bold(size: 27.scale))
             .lineHeight(32.scale)
             .textAlignment(.center)
@@ -143,7 +143,7 @@ private extension OSlideGoalsView {
         
         let view = UIButton()
         view.backgroundColor = Appearance.mainColor
-        view.layer.cornerRadius = 16.scale
+        view.layer.cornerRadius = 30.scale
         view.setAttributedTitle("Onboarding.Proceed".localized.attributed(with: attrs), for: .normal)
         view.addTarget(self, action: #selector(onNext), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false

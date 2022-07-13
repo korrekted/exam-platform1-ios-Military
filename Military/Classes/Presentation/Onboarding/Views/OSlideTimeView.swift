@@ -148,7 +148,7 @@ private extension OSlideTimeView {
 private extension OSlideTimeView {
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(Appearance.blackColor)
             .font(Fonts.SFProRounded.bold(size: 27.scale))
             .lineHeight(32.scale)
             .textAlignment(.center)
@@ -188,7 +188,7 @@ private extension OSlideTimeView {
         
         let view = UIButton()
         view.backgroundColor = Appearance.mainColor
-        view.layer.cornerRadius = 16.scale
+        view.layer.cornerRadius = 30.scale
         view.setAttributedTitle("Onboarding.Next".localized.attributed(with: attrs), for: .normal)
         view.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false

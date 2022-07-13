@@ -16,7 +16,7 @@ final class OSlideReferencesView: OSlideView {
     
     private lazy var disposeBag = DisposeBag()
     
-    private lazy var coursesManager = CoursesManagerCore()
+    private lazy var coursesManager = CoursesManager()
     
     override init(step: OnboardingView.Step, scope: OnboardingScope) {
         super.init(step: step, scope: scope)
@@ -73,7 +73,7 @@ private extension OSlideReferencesView {
 private extension OSlideReferencesView {
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(Appearance.blackColor)
             .font(Fonts.SFProRounded.bold(size: 27.scale))
             .lineHeight(32.scale)
             .textAlignment(.center)
@@ -105,7 +105,7 @@ private extension OSlideReferencesView {
         let view = UIButton()
         view.backgroundColor = Appearance.mainColor
         view.setAttributedTitle("Onboarding.Next".localized.attributed(with: attrs), for: .normal)
-        view.layer.cornerRadius = 16.scale
+        view.layer.cornerRadius = 30.scale
         view.addTarget(self, action: #selector(onNext), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

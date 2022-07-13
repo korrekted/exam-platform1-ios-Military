@@ -145,7 +145,7 @@ private extension OSlideWelcomeView {
     func makeButton() -> UIButton {
         let view = UIButton()
         view.backgroundColor = Appearance.mainColor
-        view.layer.cornerRadius = 16.scale
+        view.layer.cornerRadius = 30.scale
         view.addTarget(self, action: #selector(didTapped), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

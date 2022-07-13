@@ -127,7 +127,7 @@ private extension OPushView {
 private extension OPushView {
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(Appearance.blackColor)
             .font(Fonts.SFProRounded.bold(size: 27.scale))
             .lineHeight(32.scale)
             .textAlignment(.center)
@@ -142,7 +142,7 @@ private extension OPushView {
     
     func makeSubtitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor(integralRed: 75, green: 81, blue: 102))
+            .textColor(Appearance.greyColor)
             .font(Fonts.SFProRounded.regular(size: 20.scale))
             .lineHeight(28.scale)
             .textAlignment(.center)
@@ -172,7 +172,7 @@ private extension OPushView {
         
         let view = UIButton()
         view.backgroundColor = Appearance.mainColor
-        view.layer.cornerRadius = 16.scale
+        view.layer.cornerRadius = 30.scale
         view.setAttributedTitle("Onboarding.Proceed".localized.attributed(with: attrs), for: .normal)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
@@ -181,7 +181,7 @@ private extension OPushView {
     
     func makeNotNowButton() -> UIButton {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(Appearance.blackColor)
             .font(Fonts.SFProRounded.regular(size: 20.scale))
             .textAlignment(.center)
         
